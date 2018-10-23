@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             fragment.beginTransaction()
                     .add(R.id.head_container, headFragment)
                     .commit();
+
             fragment.beginTransaction()
                     .add(R.id.body_container, bodyFragment)
                     .commit();

@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.shankaryadav.www.customstyle.data.AndroidImageAssets;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class MasterListAdapter extends BaseAdapter {
@@ -41,12 +44,20 @@ public class MasterListAdapter extends BaseAdapter {
         ImageView imageView;
         if (view == null) {
             imageView = new ImageView(mContext);
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(240, 150));
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setPadding(5, 5, 5, 5);
 
+        } else {
+            imageView = (ImageView) view;
         }
+        imageView.setImageResource(mImageIds.get(i));
 
-
-
-
-        return null;
+        return imageView;
     }
 }
+
+//    public void setmImageIds(List<Integer> mImageIds) {
+//        this.mImageIds = mImageIds;
+//    }
+//}

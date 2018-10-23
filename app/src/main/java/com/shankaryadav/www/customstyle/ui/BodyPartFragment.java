@@ -41,12 +41,16 @@ public class BodyPartFragment extends Fragment {
         if (savedInstanceState != null){
 
             savedInstanceState.getIntegerArrayList(HEAD_LIST);
-            savedInstanceState.getIntegerArrayList(BODY_LIST);
-            savedInstanceState.getIntegerArrayList(LEG_LIST);
-
             savedInstanceState.getInt(Head_Index);
+
+            savedInstanceState.getIntegerArrayList(BODY_LIST);
             savedInstanceState.getInt(Body_Index);
+
+            savedInstanceState.getIntegerArrayList(LEG_LIST);
             savedInstanceState.getInt(Leg_Index);
+
+
+
 
         }
 
