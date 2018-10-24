@@ -2,6 +2,7 @@ package com.shankaryadav.www.customstyle.ui;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,7 +42,7 @@ private int legIndex;
 
     @Override
     public void onImageSelected(int position) {
-        Toast.makeText(getApplicationContext(),"position clicked" + position, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"You Tapped on " + "=" + position, Toast.LENGTH_SHORT).show();
 
         int bodyPartNumber = position/12;
 
@@ -70,7 +71,7 @@ private int legIndex;
         final Intent intent = new Intent(getApplicationContext(),MainActivity.class);
         intent.putExtras(b);
 
-        Button button = (Button) findViewById(R.id.fragmentNextButton);
+        FloatingActionButton button = (FloatingActionButton) findViewById(R.id.fragmentNextButton);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
