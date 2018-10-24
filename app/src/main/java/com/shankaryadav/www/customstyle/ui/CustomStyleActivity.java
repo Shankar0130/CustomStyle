@@ -37,6 +37,8 @@ private int legIndex;
     }
 
 
+    // implementation of callback method
+
     @Override
     public void onImageSelected(int position) {
         Toast.makeText(getApplicationContext(),"position clicked" + position, Toast.LENGTH_SHORT).show();

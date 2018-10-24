@@ -14,6 +14,8 @@ import java.util.List;
 
 public class MasterListAdapter extends BaseAdapter {
 
+    // Grab the Context and List Array wherever the object i created from this class
+
     private Context mContext;
     private List<Integer> mImageIds;
 
@@ -22,7 +24,7 @@ public class MasterListAdapter extends BaseAdapter {
         this.mImageIds = mImageIds;
     }
 
-
+// override methods for BaseAdapter
     @Override
     public int getCount() {
         return mImageIds.size();
@@ -42,14 +44,19 @@ public class MasterListAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         ImageView imageView;
+
+        // when there is no view
+
         if (view == null) {
             imageView = new ImageView(mContext);
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             imageView.setPadding(5, 5, 5, 5);
 
         } else {
             imageView = (ImageView) view;
         }
+        // setting up he image resources to show
+
         imageView.setImageResource(mImageIds.get(i));
 
         return imageView;

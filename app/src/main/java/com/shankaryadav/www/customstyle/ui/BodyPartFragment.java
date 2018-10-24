@@ -38,6 +38,8 @@ public class BodyPartFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        // To get the current state of the app in Bundle
+
         if (savedInstanceState != null){
 
             savedInstanceState.getIntegerArrayList(HEAD_LIST);
@@ -56,11 +58,14 @@ public class BodyPartFragment extends Fragment {
 
 
 
-
+//inflating the layout
 
         View rootView = inflater.inflate(R.layout.fragment_body_part, container, false);
 
       final  ImageView imageView = rootView.findViewById(R.id.body_part_image_view);
+
+
+      // To set the image in fragment and rotate all the image one by one on user tap in Head,Body and Leg
 
        if (headList != null){
            imageView.setImageResource(AndroidImageAssets.getHeads().get(headIndex));
@@ -127,6 +132,8 @@ public class BodyPartFragment extends Fragment {
     }
 
 
+    // method setup to which type of integer List and index value for exact image
+
     public void setHeadList(List<Integer> headList) {
         this.headList = headList;
     }
@@ -150,6 +157,9 @@ public class BodyPartFragment extends Fragment {
     public void setLegIndex(int legIndex) {
         this.legIndex = legIndex;
     }
+
+
+    // method override to save the current state of the app
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {

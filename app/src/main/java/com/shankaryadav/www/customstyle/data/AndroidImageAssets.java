@@ -7,6 +7,8 @@ import java.util.List;
 
 public class AndroidImageAssets {
 
+    // Image assets
+
     private static final List<Integer> heads = new ArrayList<Integer>() {
         {
             add(R.drawable.head1);
@@ -61,11 +63,15 @@ public class AndroidImageAssets {
 
     }};
 
+    // List to call all three at once
+
     private static final List<Integer> all = new ArrayList<Integer>() {{
        addAll(heads);
        addAll(bodies);
        addAll(leg);
     }};
+
+    //get methods
 
     public static List<Integer> getHeads() {
         return heads;

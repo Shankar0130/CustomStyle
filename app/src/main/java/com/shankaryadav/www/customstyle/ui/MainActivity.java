@@ -25,6 +25,8 @@ private int legindex;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Getting all the Bundle Integer key value from CustomStyle Activity
+
         Bundle b = new Bundle();
         b = getIntent().getExtras();
 
@@ -32,7 +34,7 @@ private int legindex;
         bodyindex = b.getInt("bodyIndex");
         legindex = b.getInt("legIndex");
 
-
+// setting imageResource respect of key value
 
         if (savedInstanceState == null) {
 

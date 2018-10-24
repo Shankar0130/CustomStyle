@@ -21,6 +21,8 @@
            android:paddingTop="16dp"
            android:paddingBottom="16dp">
 
+           <!--FrameLayout for the Head-->
+
            <FrameLayout
                android:id="@+id/head_container"
                android:layout_width="match_parent"
@@ -28,12 +30,16 @@
                android:scaleType="centerInside"
                />
 
+           <!--FrameLayout for Body-->
+
            <FrameLayout
                android:id="@+id/body_container"
                android:layout_width="match_parent"
                android:layout_height="160dp"
                android:scaleType="centerInside"
                />
+
+           <!--FrameLayout for Leg-->
 
            <FrameLayout
                android:id="@+id/leg_container"

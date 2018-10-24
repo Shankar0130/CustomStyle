@@ -21,12 +21,15 @@ public class MasterListFragment extends Fragment {
     private GridView gridView;
     private Context mContext;
 
+    //callback to pass the information in the host Activity
+
     OnImageClickListener mCallback;
 
     public interface OnImageClickListener {
         void onImageSelected(int position);
     }
 
+// OnAttach to make sure that callback is used in the hostActivity
 
     @Override
     public void onAttach(Context context) {
@@ -59,6 +62,8 @@ public class MasterListFragment extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                //  passing the grid position to callback
                 mCallback.onImageSelected(i);
             }
         });
@@ -68,6 +73,8 @@ public class MasterListFragment extends Fragment {
 
        return rootView;
     }
+
+    // set activity to use MasterListFragment in any Activity
 
     public void setmContext(Context mContext) {
         this.mContext = mContext;
