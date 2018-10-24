@@ -44,8 +44,7 @@ public class MasterListAdapter extends BaseAdapter {
         ImageView imageView;
         if (view == null) {
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new ViewGroup.LayoutParams(240, 150));
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(5, 5, 5, 5);
 
         } else {
